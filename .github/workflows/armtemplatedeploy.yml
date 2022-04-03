@@ -29,3 +29,4 @@ jobs:
           region: West US 3
           template: ./arm-templates/resourcegroup.json
           deploymentName: rg-githubactions
+          
