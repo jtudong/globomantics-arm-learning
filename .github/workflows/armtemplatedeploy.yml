@@ -22,11 +22,10 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Deploy resource Group rg-githubactions
-      - uses: azure/arm-deploy@v1
+      - uses: Azure/arm-deploy@v1
         with:
           scope: subscription
           subscriptionId: 6081cfb9-7cb9-4b84-8be8-337fdcac59f6
           region: West US 3
           template: ./arm-templates/resourcegroup.json
           deploymentName: rg-githubactions
-          
