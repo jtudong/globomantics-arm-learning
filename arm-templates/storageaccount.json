@@ -1,0 +1,44 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccount": {
+            "type": "string",
+            "defaultValue": "storageaccount1",
+            "metadata": {
+                "description": "The name of the storage account"
+            }
+        },
+        "location": {
+            "type": "string",
+            "metadata": {
+                "description": "The location of the deployed resources"
+            }
+        },
+        "sku": {
+            "type": "string",
+            "metadata": {
+                "description": "The storage account sku"
+            }
+        }
+    },
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+            "name": "[parameters('storageAccount')]",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2021-04-01",
+            "tags": {
+                "displayName": "[parameters('storageAccount')]"
+            },
+            "location": "[parameters('location')]",
+            "kind": "StorageV2",
+            "sku": {
+                "name": "[parameters('sku')]",
+                "tier": "Premium"
+            }
+        }
+    ],
+    "outputs": {}
+}
