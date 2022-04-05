@@ -43,7 +43,7 @@ jobs:
           template: ./arm-templates/storageaccount.json
           parameters: 
             sku=Standard_LRS
-            storageAccountName=globostg202204042055
+            storageAccount=globostg202204042108
             location=westus3
           deploymentMode: incremental
 
