@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "storageAccount": {
-            "value": "globostg202204042031"
+            "value": "globostg202204042043"
         },
         "location": {
-            "value": "West US 3"
+            "value": "westus3"
         },
         "sku": {
             "value": "Standard_LRS"
