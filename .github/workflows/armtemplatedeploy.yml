@@ -55,5 +55,5 @@ jobs:
           subscriptionId: 6081cfb9-7cb9-4b84-8be8-337fdcac59f6
           template: ./arm-templates/virtualmachine.json
           parameters: 
-            adminPassword="MY$ecureP@ssword!"
+            adminPassword=${{ secrets.UBUNTU_ADMIN_PASSWORD }}
           deploymentMode: incremental
